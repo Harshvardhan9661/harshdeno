@@ -19,6 +19,7 @@ import pageobjectmodel.Loginpage;
 import utilitypackage.DataUtil;
 import utilitypackage.MyXLSReader;
 
+//cass to read data from excel file
 public class Logintest extends Baseclass {
 	MyXLSReader xlreader;
 	
