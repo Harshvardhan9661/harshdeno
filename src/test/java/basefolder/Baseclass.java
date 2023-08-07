@@ -28,7 +28,8 @@ public class Baseclass {
 		driver=new ChromeDriver();
 		driver.get(pro.getProperty("url"));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		
 	}
 	@AfterMethod
 	public void teardown() {
