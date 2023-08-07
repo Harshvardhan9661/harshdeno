@@ -26,7 +26,7 @@ public class Logintest extends Baseclass {
 	MyXLSReader xlreader;
 	
 	@Test(dataProvider="getdate")
-	public void loginmethod(HashMap<String,String> map) {
+	public void loginmethod(HashMap<String,String> map) throws InterruptedException {
 		//|| map.get("Runmode").equals("N")
 		System.out.println("test1");
 		if(!DataUtil.isRunnable(xlreader, "LoginTest", "Testcases") || map.get("Runmode").equals("N")) {
@@ -41,6 +41,7 @@ public class Logintest extends Baseclass {
 		lp.Enterusername(map.get("Username"));
 		lp.Enterpassword(map.get("Password"));
 		Accountpage ap=lp.ClickSubmit();
+		Thread.sleep(40);
 		boolean bl=ap.verifylogincredential();
 		AssertJUnit.assertTrue(bl);	
 	}

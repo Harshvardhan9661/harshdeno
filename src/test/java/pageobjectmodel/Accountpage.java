@@ -14,7 +14,7 @@ public class Accountpage {
 	}
 	@FindBy(xpath="//a[text()='Edit your account information']")
 	public WebElement verifylogin;
-	public boolean verifylogincredential() {
+	public boolean verifylogincredential() throws InterruptedException {
 		boolean bl=false;
 		try {			
 		 bl=verifylogin.isDisplayed();
@@ -23,5 +23,7 @@ public class Accountpage {
 			bl=false;
 			System.out.println(e.getStackTrace());
 		}
+		Thread.sleep(50);
+		System.out.println(verifylogin.getText());
 		return bl;
 	}}

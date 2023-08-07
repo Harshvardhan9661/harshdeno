@@ -25,8 +25,10 @@ public class Loginpage {
 	public void Enterpassword(String password1) {
 		password.sendKeys(password1);
 	}
-	public Accountpage ClickSubmit() {
+	public Accountpage ClickSubmit() throws InterruptedException {
+		Thread.sleep(120);
 		submit.click();
+		Thread.sleep(120);
 		return new Accountpage(driver);
 	}
 	

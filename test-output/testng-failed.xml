@@ -8,8 +8,9 @@
     <classes>
       <class name="logintest.Logintest">
         <methods>
+          <include name="teardown"/>
           <include name="setup"/>
-          <include name="loginmethod" invocation-numbers="1"/>
+          <include name="loginmethod" invocation-numbers="2"/>
         </methods>
       </class> <!-- logintest.Logintest -->
     </classes>
